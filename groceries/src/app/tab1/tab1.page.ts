@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
@@ -42,9 +43,7 @@ export class Tab1Page {
     });
     toast.present();
 
-    // eslint-disable-next-line prefer-const
     let message = 'Grocery item - Name : ' + item.name + ' - Quantity: ' + item.Quantity;
-    // eslint-disable-next-line prefer-const
     let subject = 'Shared via Groceries App';
 
     this.socialSharing.share(message, subject).then(() => {
