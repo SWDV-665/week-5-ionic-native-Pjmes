@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-import { SocialSharing } from '@awesome-cordova-plugins/social-sharing/ngx';
+import { SocialSharing, SocialSharingOriginal } from '@ionic-native/social-sharing';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
@@ -14,7 +14,7 @@ import { InputDialogServiceService } from './input-dialog-service.service';
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    GroceriesServiceService, InputDialogServiceService, SocialSharing],
+    GroceriesServiceService, InputDialogServiceService, SocialSharingOriginal],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

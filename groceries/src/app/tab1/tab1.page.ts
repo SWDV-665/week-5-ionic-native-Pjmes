@@ -5,7 +5,7 @@ import { ToastController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { GroceriesServiceService } from '../groceries-service.service';
 import { InputDialogServiceService } from '../input-dialog-service.service';
-import { SocialSharing } from '@awesome-cordova-plugins/social-sharing/ngx';
+import { SocialSharing, SocialSharingOriginal } from '@ionic-native/social-sharing';
 
 
 @Component({
@@ -20,7 +20,7 @@ export class Tab1Page {
 
   constructor(public navCtrl: NavController, public toastCtrl: ToastController, public alertCtrl: AlertController,
     public dataService: GroceriesServiceService, public inputService: InputDialogServiceService,
-    public socialSharing: SocialSharing)  {}
+    public socialSharing: SocialSharingOriginal)  {}
 
   loadItems(){
     return this.dataService.getItems();
